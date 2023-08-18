@@ -51,7 +51,7 @@ export function Footer({ title, description, menus, copyright }) {
           <div className="mx-auto w-full px-4 text-center">
             <Typography
               variant="small"
-              className="font-normal text-blue-gray-50"
+              className="font-normal text-green"
             >
               {copyright}
             </Typography>
