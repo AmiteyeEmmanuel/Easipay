@@ -1,6 +1,7 @@
 # [0.4.0](https://github.com/estevanmaito/windmill-dashboard-react/compare/0.3.2...0.4.0) (2020-07-22)
 
 
+### Content
 ### Bug Fixes
 
 * **buttons:** update icon Buttons syntax as recommended in @windmill/react-ui ([15260fd](https://github.com/estevanmaito/windmill-dashboard-react/commit/15260fd23600bfcef488edd818df35a7e4652a58))
