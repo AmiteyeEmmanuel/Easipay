@@ -1,9 +1,6 @@
-# TechTime LandingPage and Dashboard Reactjs
 
-🚀 [See it live](https://techtime-iybs.onrender.com)
-🚀 [Docker](https://localhost:3000)
+LandingPage and Dashboard Reactjs
 
-## DOCKER
 
 This is not a template. This is a complete application, built on top of React.
 
@@ -26,13 +23,13 @@ https://techtime-iybs.onrender.com
 ## 📚 Docs
 
 DesKtop View 
-![Screenshot (12)](https://user-images.githubusercontent.com/97501475/227932014-3c947e2e-01a7-4cc8-bad4-b47455d626c9.png)
+
 
 Tablet View (Min-Width:768px) 
-![Screenshot (14)](https://user-images.githubusercontent.com/97501475/227932234-041f2554-c451-4521-af1b-810379ad7eb6.png)
+
 
 Mobile View (Max-WIdth:630px)
-![Screenshot (13)](https://user-images.githubusercontent.com/97501475/227932364-58f1563c-da4e-4131-b90a-7ac7c8db92d9.png)
+
 
 ### General components
 
