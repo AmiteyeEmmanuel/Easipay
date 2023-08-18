@@ -23,7 +23,7 @@ function Header() {
   const [show, setShow] = useState(false);
   
   return (
-    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-blue  backdrop-blur-sm shadow-lg'}`}>
+    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white  backdrop-blur-sm shadow-lg'}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
 
@@ -31,7 +31,7 @@ function Header() {
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
             <Link to="/" className="block" aria-label="Cruip">
-            <p className='mr-20 text-cool-gray-300 italic text-lg' width="100px" height="100px">  TIME-LEAD</p>       
+            <img src="/img/Logo.jpg" className='mr-20' width="100px" height="100px" alt='' />
            </Link>
           </div>
     
@@ -41,7 +41,7 @@ function Header() {
           <nav className=" hidden  lg:flex lg:flex-grow">
             <ul className="flex flex-grow justify-end flex-wrap items-center">
               <li>
-                <a href="/create-account" className="font-medium rounded-md ml-3 bg-white  text-blue hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">INVEST NOW</a>
+                <a href="/create-account" className="font-medium rounded-md ml-3 bg-green  text-white hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"> REGISTER</a>
               </li>
             </ul>
    

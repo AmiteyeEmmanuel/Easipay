@@ -12,7 +12,7 @@ function HeroHome() {
   }, []);
 
   return (
-    <section className="relative bg-blue">
+    <section className="relative bg-white">
   
       <div data-aos="fade-in" className="max-w-6xl mx-auto px-4 sm:px-6">
 
@@ -21,57 +21,51 @@ function HeroHome() {
 
           {/* Section header */}
           <div   id='Home' className=" lg:text-justify lg:mx-0 lg:pt-20 lg:pb-12 md:pb-2 md:text-center md:justify-center md:mx-auto md:items-center">
-            <img  className="absolute -mt-16 ml-10" src="/img/circle.png" alt="" />
-            <img  className="absolute -mt-12 ml-64" src="/img/yellow.png" alt="" />
-            <h1 className=" lg:text-justify text-cool-gray-50 text-4xl md:text-5xl md:text-center font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Invest in your Future <br /> advance your career <br /> path</h1>
-            <div className="text-cool-gray-50 max-w-3xl ">
+            <h1 className=" lg:text-justify text-black text-4xl md:text-5xl md:text-center font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Run your <span className="text-green"> payroll </span> <br /> <span className="text-gold"> easily </span> in <span className="text-light-red"> seconds</span></h1>
+            <div className="text-green max-w-3xl ">
                 <div>
-                  <p>
-                  Build Your future With Innovative Mindset. The Best And Largest All.
+                  <p className="text-black">
+                  We've built an all-inclusive simple solution for
                    <br />
-                   Be the best in the world with the Mind.
+                   individual and businesses to manage staff, pay.
                    <br/> 
-                   You can win it.
+                   salaries, bills, and relevant taxes all at once
                   </p>
                 </div>
                 <div className="mt-5 gap-4 sm:gap-2 xs:flex xs:flex-col xs:mx-auto  xs:items-center">
-                
-                <button className="bg-transparent border rounded-sm border-gray-200 mr-4 py-2 px-5 mb-3 xs:w-8/12" >
-                  <a  className=" flex btn text-gray-600  w-full mb-4 sm:w-auto sm:mb-0" href="/create-account">Get Started Now <ArrowUpRightIcon color="white" className="mt-1 ml-2 font-bold h-3 w-4"  /> </a>
-                </button>
-                <button className="bg-white text-blue rounded-sm xs:px-5 xs:py-2 py-2 px-4 mb-3 xs:w-8/12" >
-                  <a className=" btn text-gray-600  w-full mb-4 sm:w-auto sm:mb-0" href="/create-account">Invest Now </a>
+                <button className="bg-green border rounded-full border-gray-200 mr-4 py-3 px-6 mb-3 xs:w-8/12" >
+                  <a  className=" flex btn text-white  w-full mb-4 sm:w-auto sm:mb-0" href="/create-account"> Start Using Free, Forever </a>
                 </button>
                 </div>
 
-                <div className="flex xl:mx-0 xl:ml-0 lg:mx-0 lg:ml-0 md:mx-auto md:ml-24">
-                  <div>
-                  <img  alt="Phone Image" src="/img/One.jpg" width="80px" height="80px" className=" px-4" />
-                  </div>
-                  <div className="relative -ml-10">
-                  <img  alt="Phone Image" src="/img/five.jpg" width="80px" height="60px" className="px-4 hover:transition-transform" />
-                  </div>
-                  <div className="relative -ml-10">
-                  <img  alt="Phone Image" src="/img/nine.jpg" width="80px" height="80px" className="  px-4 hover:transition-transform" />
-                  </div>
-                  <div className="relative -ml-10">
-                  <img  alt="Phone Image" src="/img/seven.jpg" width="80px" height="80px" className="px-4 hover:transition-transform" />
-                  </div>
-                  <div className="relative -ml-10">
-                  <img  alt="Phone Image" src="/img/five.jpg" width="80px" height="80px" className= " px-4" />
-                  </div>
-                  <p className=" text-2xl font-extrabold ">
-                    WIN+ <br />
-                    <p className="-mt-2 ml-2 font-thin text-sm text-gray-500">  Previews </p>
+                <div className="mt-16 xl:mx-0 xl:ml-0 lg:mx-0 lg:ml-0 md:mx-auto md:ml-24">
+                  <p className="text-xs font-thin text-black">
+                    Download the Eazipay App<br />
                   </p>
-                  <img  className=" xl:hidden lg:hidden object-right justify-end items-end relative" width="90px" alt="" src="/img/OppVec.png"  />
+                  <button className="bg-white1 border rounded-lg border-off-white mr-4 py-1 px-2 mb-3 xs:w-8/12" >
+                    <div className="flex">
+                   <img width="40px"  className="object-contain bg-gray-light rounded-full py-2 px-2 mr-3" src='/img/Apple.png' alt=''/>
+                   <div>
+                   <a  className="flex btn text-black text-xs  w-full mb-4 sm:w-auto sm:mb-0" href="/create-account"> Download on the </a>
+                  <span className="text-black text-lg font-bold"> Appstore </span>
+                   </div>
+                    </div>
+                </button>
+                <button className="bg-white1 border rounded-lg border-off-white mr-4 py-1 px-2 mb-3 xs:w-8/12" >
+                    <div className="flex">
+                   <img width="45px"  className="object-contain bg-gray-light rounded-full py-2 px-2 mr-3" src='/img/Googleplay.png' alt=''/>
+                   <div>
+                   <a  className="flex btn text-black text-sm  w-full mb-4 sm:w-auto sm:mb-0" href="/create-account"> Get on  </a>
+                  <span className="text-black text-lg font-bold"> Google Play </span>
+                   </div>
+                    </div>
+                </button>
                 </div>
             </div>  
           </div>
           {/* Hero Image */}
-          <div className=" ml-10 -mb-2">
-              <img  alt="" src="/img/Home.jpg" />
-              <img  className="absolute lg:block lg:-mt-64 lg:-ml-20 md:hidden sm:absolute sm:hidden xs:hidden" width="90px" alt="" src="/img/Vector.png"  />
+          <div className=" ml-10 ">
+              <img  alt="" src="/img/homeImage.jpg" width="100%" height="100%" />
             </div>
         </div>
 

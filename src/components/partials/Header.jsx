@@ -23,45 +23,44 @@ function Header() {
   const [show, setShow] = useState(false);
   
   return (
-    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-blue  backdrop-blur-sm shadow-lg'}`}>
+    <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white  backdrop-blur-sm shadow-lg'}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <Link to="/" className="block">    
-            <p className='mr-20 text-cool-gray-300 italic text-lg' width="100px" height="100px">  TIME-LEAD</p>   
+            <Link to="/" className="block">  
+            <img src="/img/Logo.jpg" className='mr-20' width="100px" height="100px" alt='' />
            </Link>
           </div>
     
                {/* Site Route */}
-               <ul className='hidden lg:flex items-center  lg:flex-wrap ml-64'>
+               <ul className='hidden lg:flex items-center  lg:flex-wrap ml-44'>
                <li>
-            <a href="/" className=" text-cool-gray-300 hover:text-cool-gray-50 px-4 py-3 flex items-center transition duration-150 ease-in-out">Home</a>
+            <a href="/" className=" text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Individual</a>
               </li>
             <li>
-            <a href="/" className=" text-cool-gray-300 hover:text-cool-gray-50 px-4 py-3 flex items-center transition duration-150 ease-in-out">About Us</a>
+            <a href="/" className=" text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Business</a>
               </li>
             
               <li>
-                <a href="/" className="text-cool-gray-300 hover:text-cool-gray-50 px-4 py-3 flex items-center transition duration-150 ease-in-out">Contact </a>
+                <a href="/" className="text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out">Pricing </a>
               </li>
 
               <li>
-                <a href="/" className="text-cool-gray-300 hover:text-cool-gray-50 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Testimonial</a>
-              </li>
-
-              <li>
-                <a href="/" className="text-cool-gray-300 hover:text-cool-gray-50 px-3 py-3 flex items-center transition duration-150 ease-in-out"> Community</a>
+                <a href="/" className="text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Set your payroll</a>
               </li>
             </ul>
 
           {/* Site navigation */}
           <nav className=" hidden  lg:flex lg:flex-grow">
             <ul className="flex flex-grow justify-end flex-wrap items-center">
+            <li className=" px-4 py-6">
+                <Link to="/Login" className="font-medium bg-white rounded-full text-black border border-gray-30  px-20 py-3 flex items-center transition duration-150 ease-in-out"> Login</Link>
+              </li>
               <li>
-                <Link to="/Create-account" className="font-medium bg-white rounded-md text-blue  border-blue px-3 py-3 flex items-center transition duration-150 ease-in-out">Invest Now</Link>
+                <Link to="/Create-account" className="font-medium bg-green rounded-full text-white border border-gray-30  px-20 py-3 flex items-center transition duration-150 ease-in-out"> Register</Link>
               </li>
             </ul>
    
@@ -82,24 +81,19 @@ function Header() {
 
                          {/* Site Route */}
                <ul className='ml-2 py-4 justify-center'>
-            <li className='mb-2 border-black border-solid border-b-2 items-center justify-center text-center '>
-            <a href="/" className=" text-black gap-4  transition duration-150 ease-in-out">Home</a>
+               <li>
+            <a href="/" className=" text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Individual</a>
+              </li>
+            <li>
+            <a href="/" className=" text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Business</a>
               </li>
             
-              <li className='mb-2 border-black border-solid border-b-2 items-center justify-center text-center '>
-            <a href="/" className=" text-black gap-4  transition duration-150 ease-in-out">About Us</a>
-              </li>
-            
-              <li className='mb-2 border-black border-solid border-b-2 items-center justify-center text-center '>
-                <a href="/" className="text-black gap-2 transition duration-150 ease-in-out">Contact </a>
+              <li>
+                <a href="/" className="text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out">Pricing </a>
               </li>
 
-              <li className='mb-2 border-black border-solid border-b-2 items-center justify-center text-center '>
-                <a href="/" className="text-black gap-2 items-center transition duration-150 ease-in-out">Testimonial</a>
-              </li>
-
-              <li className='mb-2 border-black border-solid border-b-2 items-center justify-center text-center '>
-                <a href="/" className="text-black gap-2 items-center transition duration-150 ease-in-out"> Community</a>
+              <li>
+                <a href="/" className="text-black hover:text-cool-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Set your payroll</a>
               </li>
             </ul>
 
@@ -108,7 +102,7 @@ function Header() {
             <ul className="items-center text-center">
 
             <li className='mb-4 text-center'>
-                <a href="/Create-account" className="justify-center text-center  font-medium rounded-md ml-3 bg-blue  text-cool-gray-50 hover:text=cool-gray-900 px-5 py-2 flex items-center ">Join Telegram</a>
+                <a href="/Create-account" className="justify-center text-center  font-medium rounded-full ml-3 bg-green  text-cool-gray-50 hover:text=cool-gray-900 px-5 py-2 flex items-center "> Create Account</a>
               </li>
             </ul>
    

@@ -1,12 +1,12 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
-
+import { Link} from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import ImageLight from "../assets/img/Home.jpg";
 import ImageDark from "../assets/img/Home.jpg";
 import { Input, Label, Button, Select } from "@windmill/react-ui";
 import { useState } from "react";
-import { api } from "../utils/queries";
-import { toast } from "react-toastify";
+
+
 var country_list = [
   "Afghanistan",
   "Albania",
@@ -216,44 +216,61 @@ var country_list = [
 ];
 function CreateAccount() {
   const [loading, setLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    country: "",
-    password: "",
-    confirm_password:""
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const dispatch = useDispatch();
 
-  const history = useHistory();
+  // const loginToApp = (e) => {
+  //     e.preventDefault();
 
-  const onChange = (e) => {
-    setUserInfo({
-      ...userInfo,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const initiateRegister = async () => {
+  //     signInWithEmailAndPassword(auth, email, password)
+  //     .then((userAuth) => {
+  //         dispatch(login({
+  //             email: userAuth.user.email,
+  //             uid: userAuth.user.uid, 
+  //             displayName: userAuth.user.displayName,
+  //             profile: userAuth.user.photoURL,
+  //         })
+  //         );
+  //     }).catch(error => alert(error.message))
+  // };
+  const initiateRegister = () => {
     setLoading(true);
-    await api
-      .post("/auth/local/register", {...userInfo, username:userInfo.email})
-      .then((res) => {
-        history.push("/login");
-        sessionStorage.setItem('token', res.jwt)
-        return res.data;
-      })
-      .catch((err) =>{ 
-        
-        toast( err?.response?.data?.error?.message || 'An error occured please try again')
-        console.log(err?.response?.data?.error?.message)})
-      .finally(() => setLoading(false));
-  };
+      if(!email) {
+          return alert("please enter your email!")
+      }
+      if (!password) {
+          alert("Please enter a password!");
+          return;
+        }
 
-  const allTruthy = Object.values(userInfo).every(value => value);
+  //     createUserWithEmailAndPassword(auth, email, password)
+  //     .then((userAuth) => {
+  //          const user = userAuth.user;
+  //          updateProfile(user, {
+  //             displayName: firstName,
+  //           })
+  //         .then(() => {
+  //             dispatch(login({
+  //                 email: userAuth.user.email,
+  //                 uid: userAuth.user.uid, 
+  //                 displayName: firstName,
+  //             }));
+  //         })
+  //         .catch((err) =>{ 
+        
+  //           toast( err?.response?.data?.error?.message || 'An error occured please try again')
+  //           console.log(err?.response?.data?.error?.message)})
+  //         .finally(() => setLoading(false));
+  //     })
+  //     .catch(error => alert(error.message));    
+  };
 
   return (
-    <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900  bg-blue">
-      <div className="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+    <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900  bg-white">
+      <div className="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-off-white rounded-lg shadow-xl dark:bg-gray-800">
         <div className="flex flex-col overflow-y-auto md:flex-row">
           <div className="h-32 md:h-auto md:w-1/2">
             <img
@@ -272,13 +289,13 @@ function CreateAccount() {
           <main className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
             <div className="w-full">
               <h1 className="mb-4 text-xl font-semibold italic text-gray-700 dark:text-gray-200">
-                Create account and Invest Now
+                Register Now
               </h1>
               <Label>
                 <span>First Name</span>
                 <Input
                   className="mt-1"
-                  onChange={onChange}
+                  onChange={e => setFirstName(e.target.value)}
                   name="first_name"
                   type="text"
                   placeholder="John"
@@ -288,7 +305,7 @@ function CreateAccount() {
                 <span>Last Name</span>
                 <Input
                   className="mt-1"
-                  onChange={onChange}
+                  onChange={e => setLastName(e.target.value)}
                   name="last_name"
                   type="text"
                   placeholder="Doe"
@@ -296,7 +313,7 @@ function CreateAccount() {
               </Label>
               <Label className="mt-4">
                 <span>Country</span>
-                <Select onChange={onChange} name="country" className="mt-1">
+                <Select onChange={e => setEmail(e.target.value)} name="country" className="mt-1">
                   {country_list.map((country) => (
                     <option>{country}</option>
                   ))}
@@ -305,7 +322,7 @@ function CreateAccount() {
               <Label className="mt-4">
                 <span>Email</span>
                 <Input
-                  onChange={onChange}
+                  onChange={e => setEmail(e.target.value)}
                   className="mt-1"
                   name="email"
                   type="email"
@@ -315,7 +332,7 @@ function CreateAccount() {
               <Label className="mt-4">
                 <span>Password</span>
                 <Input
-                  onChange={onChange}
+                  onChange={e => setPassword(e.target.value)}
                   className="mt-1"
                   name="password"
                   placeholder="***************"
@@ -326,26 +343,22 @@ function CreateAccount() {
                 <span>Confirm password</span>
                 <Input
                   className="mt-1"
-                  onChange={onChange}
+                  onChange={e => setPassword(e.target.value)}
                   placeholder="***************"
                   type="password"
                   name='confirm_password'
                 />
               </Label>
 
-              <Button block disabled={!allTruthy || userInfo.password !== userInfo.confirm_password} className="mt-4" onClick={initiateRegister}>
+              <Button block className="mt-4" onClick={initiateRegister}>
                 {loading ? "Loading..." : "Create account"}
               </Button>
-              {
-                 userInfo.password !== userInfo.confirm_password && userInfo.password && userInfo.confirm_password ?   <p className='text-sm text-center text-red-600'>Please ensure passwords match</p> : null
-              }
-            
-
+              
               <hr className="my-8" />
 
               <p className="mt-4">
                 <Link
-                  className="text-sm font-medium text-blue dark:text-purple-400 hover:underline"
+                  className="text-sm font-medium text-green dark:text-green hover:underline"
                   to="/login"
                 >
                   Already have an account? Login

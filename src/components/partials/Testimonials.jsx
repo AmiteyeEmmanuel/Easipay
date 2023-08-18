@@ -4,171 +4,58 @@ import { testAnimation } from '../../animation';
 
 function Testimonials() {
   const [selected, setSelected] = useState(0);
-  const testimonial = [
-    {
-      review: 'High-Dimension Video is Video Of Higher Resolution And Quality Then Standard. Definition. High Definition Video Is Video Of Higher Resolution And Quality Than Standard Definition. Build Your Future With Our Quality Education. The Best And Largest All-In-One Online Tutoring Platform In The World Definition. High Definition video is video of higher resolution and quality than standard definition. Build Your Future With Our Quality resolution and quality than standard definition. Build Your Future With With Our Quality Education. The Best And Largest All In-One Online Tutoring Platform In The World',
-      img: '/img/fr2.png',
-      name: 'Bella Moon',
-    },
-    {
-      review: 'High-Dimension Video is Video Of Higher Resolution And Quality Then Standard. Definition. High Definition Video Is Video Of Higher Resolution And Quality Than Standard Definition. Build Your Future With Our Quality Education. The Best And Largest All-In-One Online Tutoring Platform In The World Definition. High Definition video is video of higher resolution and quality than standard definition. Build Your Future With Our Quality resolution and quality than standard definition. Build Your Future With With Our Quality Education. The Best And Largest All In-One Online Tutoring Platform In The World',
-      img: '/img/fr1.png',
-      name: 'Samuel Fortune',
-    },
-    {
-      review: 'High-Dimension Video is Video Of Higher Resolution And Quality Then Standard. Definition. High Definition Video Is Video Of Higher Resolution And Quality Than Standard Definition. Build Your Future With Our Quality Education. The Best And Largest All-In-One Online Tutoring Platform In The World Definition. High Definition video is video of higher resolution and quality than standard definition. Build Your Future With Our Quality resolution and quality than standard definition. Build Your Future With With Our Quality Education. The Best And Largest All In-One Online Tutoring Platform In The World',
-      img: '/img/fr3.png',
-      name: 'Bryce Jason',
-    },
-    {
-      review: 'High-Dimension Video is Video Of Higher Resolution And Quality Then Standard. Definition. High Definition Video Is Video Of Higher Resolution And Quality Than Standard Definition. Build Your Future With Our Quality Education. The Best And Largest All-In-One Online Tutoring Platform In The World Definition. High Definition video is video of higher resolution and quality than standard definition. Build Your Future With Our Quality resolution and quality than standard definition. Build Your Future With With Our Quality Education. The Best And Largest All In-One Online Tutoring Platform In The World',
-      img: '/img/fr3.png',
-      name: 'Bryce Jason',
-    }
-  ];
-  
+ 
   return (
-    <Section >
+    <section className="relative bg-white h-full">
 
-  
-  <div className="max-w-3xl mx-auto text-center pb-4 md:pb-4">
-    <h1 className=" text-4xl font-sans font-extrabold mb-4"> What Our Clients Are Saying</h1>
-    <p className="max-w-4xl p-4 lg:w-full md:w-9/12 md:mx-auto"> High-Dimension Video is Video Of Higher Resolution And Quality Then Standard. Definition. While There's No Standard Meaning For High Definition, Generally Any Standard Video Image.</p>
-  </div>
+    {/* Section background (needs .relative class on parent and next sibling elements) */}
+    <div className="absolute inset-0 bg-white pointer-events-none mb-16" aria-hidden="true"></div>
+    <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
 
+    <img  className="relative obtain-contain" width="200px top-40"  src="/img/One.jpg" alt="" />
 
-  {/* Testimonials */}
-  
-      <div className="container">
-        <div className= "testimonials"
-        variants={testAnimation}
-        transition = {{ delay: 0.02, 
-        type: "tween",
-        duration : 0.9,
-      }}
-        >
-          {
-            testimonial.map(({ name, img, review}, index)=> {
-              return(
-                <div className={`testimonial ${selected === index ? 'active' : 'hidden' }`} key ={index}>
-                  <div className="title-container">
-                    <p className='description'>
-                      {review}
-                    </p>
-                    <div className='flex gap-4'>
-                    <img src={img} alt="" />
-                    <p className=' mt-2 font-bold text-lg '>
-                      {name} <br />
-                      <span className=' font-light text-base'> Product Designer</span>
-                    </p>
-                    </div>
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className='lg:grid lg:grid-cols-2 md:grid md:grid-cols-1 gap-10'>
+      <div className="">
+        {/* Section content */}
+        <div className="md:grid mt-40 cols-12 md:gap-6">
+          {/* Content */}
+          <div className="max-w-xl md:max-w-none md:w-full md:col-span-7 lg:col-span-12">                  
+                <div className="relative lg:ml-0 md:ml-16">
+                     <h1 className="text-green font-extrabold text-5xl"> Get an Exclusive <br/> Demo of Eazipay</h1>
+                     <p className="text-black font-semibold gap-6"> Our greatest priority is to put you and <br/> your business first. Let's show you how <br/> we can help.</p>
                   </div>
-                </div> 
+          </div>
+        </div >
+      </div >
+      <div className="md:grid mb-24 cols-12 md:gap-6">
+          {/* Content */}
+          <form className="max-w-xl md:max-w-none md:w-full md:col-span-7 lg:col-span-12 rounded overflow-hidden shadow-xl">                  
+                <div className="relative lg:ml-0 md:ml-16">
+                     <h1 className="text-black font-extrabold text-2xl text-center"> First things first</h1>
+                     <p className="text-black font-semibold gap-6 text-center text center"> We want to serve you better. Tell us a bit <br/> about yourself or company</p>
+                  </div>
+                  <ul className="flex flex-grow justify-end flex-wrap items-center">
+            <li className=" px-4 py-6">
+                <button  className="font-medium bg-green rounded-lg text-white px-20 py-3 flex items-center"> Individual</button>
+              </li>
+              <li>
+              <button  className="font-medium bg-gray-light rounded-lg text-black px-20 py-3 flex items-center"> Company</button>
+              </li>
+            </ul>
+            <input className="border border-black w-full h-10 mb-6 px-2 rounded-lg placeholder-black"  type="text" placeholder="First Name"/>
+            <input className="border border-black w-full h-10 mb-6 px-2 rounded-lg placeholder-black"  type="text" placeholder="Last Name"/>     
+            <input className="border border-black w-full h-10 mb-6 px-2 rounded-lg placeholder-black"  type="text" placeholder="Job Title"/>     
+            <input className="border border-black w-full h-10 mb-6 px-2 rounded-lg placeholder-black"  type="text" placeholder="Company Name"/>      
 
-              );
-            })
-          }
-        </div>
-
-        <div className='controls'
-            variants={testAnimation}
-            transition = {{ delay: 0.02, 
-            type: "tween",
-            duration : 0.9,
-          }}
-        >
-          <button className = {selected === 0 ? 'active' : ''}
-           onClick= {() => {
-            setSelected (0);
-          }}> </button>
-
-               <button className = {selected === 1 ? 'active' : ''}
-           onClick= {() => {
-            setSelected (1);
-          }}> </button>
-
-               <button className = {selected === 2 ? 'active' : ''}
-           onClick= {() => {
-            setSelected (2);
-          }}> </button>
-
-              <button className = {selected === 3 ? 'active' : ''}
-           onClick= {() => {
-            setSelected (3);
-          }}> </button>
-
-        </div>
-      </div>
-    </Section>
+            <button className="bg-green items-center w-full h-10 rounded-full text-white"> Request Demo </button>    
+          </form>
+        </div >
+      </div >
+     
+    </div >
+  </section >
   )
 }
-
-const Section = styled.section `
-
-.container {
-  display: flex;
-  background:#fff;
-  flex-direction: column;
-  min-height: 60vh;
-  justify-content: center;
-  align-items:center;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom:20px;
-  .testimonials{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-align: justify;
-    justify-content: center;
-    width: 70%;
-    .testimonial{
-      display: flex;
-      flex-direction: column;
-      align-items:center;
-      background:#f1f5f9;
-      border-radius: 2%;
-      gap: 1rem;     
-    }
-    .hidden{
-      display: none;
-    }
-    color: #000;
-    .title-container{
-      padding: 5rem;
-    }
-  }
-  .controls{
-    display: flex;
-    gap: 1rem;
-    button{
-      padding: 0.5rem;
-      border-radius: 2rem;
-      background-color:#B8B5FF;
-      border: 0.1rem solid #004db1;
-      cursor: pointer;
-    }
-    .active{
-      background-color: #004db1 ;
-      border: 0.1rem solid #004db1;
-    }
-  }
-}
-
-
-
-@media Screen and (min-width:280px) and (max-width: 1080px) {
-  .container{
-    padding: 2rem 0;
-    .testimonials{
-      width: 80%;
-      margin-top: 1rem;
-      .title-container{
-        padding: 2rem;
-      }
-    }
-  }
-}
-`
 
 export default Testimonials

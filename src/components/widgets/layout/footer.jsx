@@ -63,54 +63,55 @@ export function Footer({ title, description, menus, copyright }) {
 }
 
 Footer.defaultProps = {
-  title: "Exa RealEstate",
+  title: "Eazipay",
   description:
-    "Exa RealEstate is a Google powered real estate Platform..",
+    "Copyright @ 2023 Eazipay",
+    "All right reserved",
   menus: [
     {
       name: "links",
       items: [
-        { name: "About Exa RealEstate", href: "#About" },
-        { name: "CEO Talk", href: "#Ceo Talk" },
+        { name: "About", href: "" },
+        { name: "", href: "" },
         {
-          name: "Reviews",
-          href: "#reviews",
+          name: "",
+          href: "",
         },
         {
-          name: "Coaching tips",
-          href: "#coaching-tips",
+          name: "",
+          href: "",
         },
       ],
     },
     {
-      name: "other resources",
+      name: "",
       items: [
         {
-          name: "Capital Growth",
-          href: "#capital-growth",
+          name: "",
+          href: "",
         },
         {
-          name: "Diversified Assets",
-          href: "#diversified-asset",
+          name: "",
+          href: "",
         },
         {
-          name: "Tax Benefits",
-          href: "#diversified-asset",
+          name: "",
+          href: "",
         },
         {
-          name: "Retirement Income",
-          href: "#Retirement-Income",
+          name: "",
+          href: "",
         },
       ],
     },
   ],
   copyright: (
     <>
-      Copyright © {year} Exa RealEstate.{" "}
+      Copyright © {year} Eazipay.{" "}
       <a
         href=""
         target="_blank"
-        className="text-blue-gray-500 transition-colors hover:text-blue-500"
+        className="text-white-gray-500 transition-colors hover:text-white-500"
       >
       </a>
     </>
