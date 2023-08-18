@@ -1,8 +1,6 @@
-# TechTime LandingPage and Dashboard Reactjs
 
+LandingPage and Dashboard Reactjs
 
-
-## DOCKER
 
 This is not a template. This is a complete application, built on top of React.
 
