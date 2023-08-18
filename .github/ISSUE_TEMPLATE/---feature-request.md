@@ -1,5 +1,5 @@
 ---
-name: "\U0001F4A1 Feature request"
+name: "Emmanuel"
 about: 'I have a suggestion (and might want to implement myself)! '
 title: ''
 labels: ''
